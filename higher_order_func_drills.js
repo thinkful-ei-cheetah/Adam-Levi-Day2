@@ -1,5 +1,5 @@
 'use strict';
-// repeat function drill
+// repeat function drill----------------------------------------------------------
 function repeat(fn, n){
     // eslint-disable-next-line no-undef
     for ( let i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ const goodbye = () => console.log('Goodbye World');
 repeat(hello, 5);
 repeat(goodbye, 5);
 
-// filter funciton drill
+// filter funciton drill---------------------------------------------------------
 
 function filter(arr, fn) {
     let newArray = [];
@@ -48,3 +48,22 @@ const filteredNames = filter(myNames, function(name) {
 
 console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+
+// function as return values drill -----------------------------------------------
+
+function hazardWarningCreator(typeOfWarning) {
+    let warningCounter = 0;
+    return function(location) {
+        warningCounter ++;
+        console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+        // console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+        console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${warningCounter > 1 ? 'times': 'time'} today!`);
+    };
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const hrainWarning = hazardWarningCreator('Heavy rain imminent');
+const floodWarning = hazardWarningCreator('Risk of flooding in your area');
+
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('Centinela Ave and Olympic Blvd');
