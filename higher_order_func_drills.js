@@ -67,3 +67,21 @@ const floodWarning = hazardWarningCreator('Risk of flooding in your area');
 
 rocksWarning('Main St and Pacific Ave');
 rocksWarning('Centinela Ave and Olympic Blvd');
+function isPositive (value) {
+ return value > 0;
+}
+
+// Turtle movement drill STUCK ask mentor.-----------------------------------------------------------------
+
+function turtleMovement(arr){
+    let filteredSteps = [];
+    for (let i; i < arr.length; i++){
+        const result = arr[i].filter(subArr => subArr> 0);
+        console.log(result);
+        filteredSteps.push(result);
+    
+    }
+    return filteredSteps;
+}
+const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]; 
+console.log(turtleMovement(turtle));
