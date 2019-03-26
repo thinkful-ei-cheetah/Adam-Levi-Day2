@@ -31,5 +31,5 @@ function average(numbers){
     numbers.forEach ((num) => total += num);
      return total/ numbers.length;
 }
-arr = [9,8,5,5,545,123,564];
+const arr = [9,8,5,5,545,123,564];
 console.log(average(arr));
