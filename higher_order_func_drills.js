@@ -85,3 +85,24 @@ function turtleMovement(arr){
 }
 const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]; 
 console.log(turtleMovement(turtle));
+
+// reduce drill -------------------------------------------------------------------------------------------
+
+function decoder(sentence) {
+    let words = sentence.split(' ');
+    let dWords = words.reduce(decodeWord, '');
+    return dWords;
+  }
+  
+  function decodeWord(sentence, word) {
+      if (word.length === 3) {
+          sentence += ' ';
+      }
+      else {
+          sentence += word.substr(word.length - 1).toUpperCase();
+      }
+      return sentence;
+  }
+  
+  let eCode = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+  console.log(decoder(eCode));
