@@ -21,5 +21,15 @@ function min(numbers) {
     }
     return minNum;
 }
+
+function average(numbers){
+    let total = 0;
+
+    // numbers.forEach(function(num){
+    //     total += num;
+    // });
+    numbers.forEach ((num) => total += num);
+     return total/ numbers.length;
+}
 arr = [9,8,5,5,545,123,564];
-console.log(min(arr));
+console.log(average(arr));
