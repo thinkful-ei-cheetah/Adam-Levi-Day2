@@ -32,4 +32,4 @@ function average(numbers){
      return total/ numbers.length;
 }
 const arr = [9,8,5,5,545,123,564];
-console.log(average(arr));
+console.log(min(arr));
