@@ -85,11 +85,25 @@ function turtleMovement(arr){
       }
     }
     console.log(filteredSteps);
+    return filteredSteps;
 }
 
+function turtleSteps (arr){
+    let allSteps = [];
+    for(let i = 0; i < arr.length; i++){
+      const steped = arr[i].reduce(function(a,b){ 
+          return Math.abs(a) + Math.abs(b);
+        });
+        allSteps.push(steped);
+      }
+      console.log(allSteps);
+      return allSteps;
+  }
 
-const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]; 
-turtleMovement(turtle);
+
+  const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]; 
+  turtleMovement(turtle);
+  turtleSteps(turtle);
 
 // reduce drill -------------------------------------------------------------------------------------------
 
