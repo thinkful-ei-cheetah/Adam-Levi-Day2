@@ -72,19 +72,24 @@ function isPositive (value) {
 }
 
 // Turtle movement drill STUCK ask mentor.-----------------------------------------------------------------
+// A little less stuck now. 
 
 function turtleMovement(arr){
+    console.log(arr);
     let filteredSteps = [];
-    for (let i; i < arr.length; i++){
-        const result = arr[i].filter(subArr => subArr> 0);
-        console.log(result);
+    for (let i = 0; i < arr.length; i++){
+      //console.log(arr[i]);
+      const result = arr[i].filter(subArr => subArr >= 0); // && subArr[1] >= 0);
+      if (result.length > 1){
         filteredSteps.push(result);
-    
+      }
     }
-    return filteredSteps;
+    console.log(filteredSteps);
 }
+
+
 const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]; 
-console.log(turtleMovement(turtle));
+turtleMovement(turtle);
 
 // reduce drill -------------------------------------------------------------------------------------------
 
