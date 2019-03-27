@@ -104,6 +104,11 @@ function turtleSteps (arr){
   const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]; 
   turtleMovement(turtle);
   turtleSteps(turtle);
+//Rich's solution to the turtle drill --------------------------------------------------------------------
+const fSteps = turtle.filter(stepPair => stepPair[0] > -1 && stepPair[1] > -1);
+const totalSteps = fSteps.map(stepPair => stepPair[0] + stepPair[1]);
+totalSteps.forEach((stepTotal, index) => console.log(`Step ${index + 1}: ${stepTotal}`));
+
 
 // reduce drill -------------------------------------------------------------------------------------------
 
